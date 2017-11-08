@@ -31,12 +31,20 @@
 		var keyLetter = String.fromCharCode(event.keyCode);
 	
 	//If the user's guess is right	
-		if(chosenWord.indexOf(keyLetter) > -1) {
+		if(chosenWord.indexOf(keyLetter) > -1 && chosenWord.indexOf(keyLetter) < 9) {
 		//then add it to the rightWord array
 			rightWord.push(keyLetter);
+
 		//replacing the underscore with a right letter
+		for (var i = 0; i < rightWord.length; i++) {
+			if (keyLetter===rightWord[i]){
+				underScore[chosenWord.indexOf(keyLetter)] = keyLetter;
+				htmlUnderScore[0].innerHTML = underScore.join(' ');		
+			}
+		}
 			underScore[chosenWord.indexOf(keyLetter)] = keyLetter;
 			htmlUnderScore[0].innerHTML = underScore.join(' ');
+
 			//htmlRightGuess[0].innerHTML = rightGuesses.join(' ');	
 		//checking to see if the user-input word matches the chosen word
 			if(underScore.join('') == chosenWord) {
