@@ -7,6 +7,7 @@
 	var rightWord = [];
 	var wrongWord = [];
 	var underScore = [];
+	var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 //Display underscores based on how long the word is
 	var htmlUnderScore = document.getElementsByClassName('underscores');
@@ -31,19 +32,18 @@
 		var keyLetter = String.fromCharCode(event.keyCode);
 	
 	//If the user's guess is right	
-		if(chosenWord.indexOf(keyLetter) > -1 && chosenWord.indexOf(keyLetter) < 9) {
+		if(chosenWord.indexOf(keyLetter) > -1) {
 		//then add it to the rightWord array
 			rightWord.push(keyLetter);
 
 		//replacing the underscore with a right letter
 		for (var i = 0; i < rightWord.length; i++) {
-			if (keyLetter===rightWord[i]){
+			if (keyLetter === rightWord[i]){
 				underScore[chosenWord.indexOf(keyLetter)] = keyLetter;
 				htmlUnderScore[0].innerHTML = underScore.join(' ');		
 			}
 		}
-			underScore[chosenWord.indexOf(keyLetter)] = keyLetter;
-			htmlUnderScore[0].innerHTML = underScore.join(' ');
+
 
 			//htmlRightGuess[0].innerHTML = rightGuesses.join(' ');	
 		//checking to see if the user-input word matches the chosen word
@@ -59,6 +59,8 @@
 			htmlWrongGuess[0].innerHTML = wrongWord;
 		}
 	});
+
+
 		
 //Check if letter-guess is correct
 
