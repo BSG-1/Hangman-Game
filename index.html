@@ -3,30 +3,57 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
 	<title>Hangman</title>
 </head>
 <body>
 	<div class="container">
+	<br>
 		<div class="jumbotron">
 			<h1 class="text-center">Hangman Game</h1>
 			<h3 class="text-center">Press any key to get started!</h3>
 			<div class="row" class="text-center">
-			<button id="random-button" class="text-center" class="btn btn-primary"><strong>Reset Game</strong></button>
-		</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-offset-4">
-				<div class="underscores" class="text-center"></div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="rightGuess">Correct guesses: </div>
-		</div>
-		<div class="row">
-			<div class="wrongGuess">Incorrect guesses: </div>
+			<button id="reset-button" class="text-center" class="btn btn-primary"><strong>Reset Game</strong></button>
 		</div>
 	</div>
 
+	<div class="panel">
+		<div class="panel-title">
+			<div class="panel-body">
+				<div class="row">
+					<div class="text-center">
+						<div class="underscores" class="text-center"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel">
+		<div class="panel-title text-center">Correct Guesses: </div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="text-center">
+						<div class="rightGuess"></div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<div class="panel">
+		<div class="panel-title text-center">Incorrect Guesses: </div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="text-center">
+						<div class="wrongGuess"></div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+
 	<script src="assets/javascript/game.js"></script>
+
 </body>
 </html>
