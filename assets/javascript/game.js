@@ -39,8 +39,18 @@
 		//replacing the underscore with a right letter
 		for (var i = 0; i < rightWord.length; i++) {
 			if (keyLetter === rightWord[i]){
+				for (var i = 0; i < chosenWord.length; i++) {
+					if (chosenWord.charAt(i)===keyLetter){
+						underScore[i] = keyLetter;
+				        htmlUnderScore[0].innerHTML = underScore.join(' ');		
+					} 
+
+				}
+
+				
 				underScore[chosenWord.indexOf(keyLetter)] = keyLetter;
 				htmlUnderScore[0].innerHTML = underScore.join(' ');		
+					}
 			}
 		}
 
@@ -50,7 +60,7 @@
 			if(underScore.join('') == chosenWord) {
 			alert('This one is stronnnggg in the Force!');
 			}
-		}
+		
 
 	//and if guess not correct, send to wrongWord array
 		else {
