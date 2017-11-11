@@ -1,18 +1,39 @@
 body {
 	background-color: black;
 }
+.jumbotron {
+	font-family: 'Spectral SC', serif;
+	font-size: 20px;
+}
+
+h1 {
+	font-family: 'Spectral SC', serif;
+	font-size: 10px;
+}
+
+h3 {
+	font-family: 'Spectral SC', serif;
+	font-size: 20px;
+}
 
 .container {
 	background-color: red;
 }
 .underscores {
 	align-content: center;
-	font-size: 30px;
+	font-size: 40px;
 }
 
 .panel-title {
 	border-style: solid;
 	background-color: white;
+	font-family: 'Spectral SC', serif;
+	font-size: 20px;
+}
+
+.panel-body {
+	font-family: 'Spectral SC', serif;
+	font-size: 20px;
 }
 
 #reset-button {

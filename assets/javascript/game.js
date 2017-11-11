@@ -23,6 +23,7 @@
 			for (var i = 0; i < chosenWord.length; i++) {
 				underScore.push('_').display;
 			}
+
 			return underScore;
 		}
 
@@ -44,7 +45,7 @@
 					for (var i = 0; i < chosenWord.length; i++) {
 						if (chosenWord.charAt(i)===keyLetter){
 							underScore[i] = keyLetter;
-					        htmlUnderScore[0].innerHTML = underScore.join(' ');		
+					        htmlUnderScore[0].innerHTML = underScore.join(' ');
 						} 
 					}
 
@@ -58,7 +59,7 @@
 			//htmlRightGuess[0].innerHTML = rightGuesses.join(' ');	
 			//checking to see if the user-input word matches the chosen word
 				if(underScore.join('') == chosenWord) {
-					alert('You are strong in the Force!' + ' Win Count: ' + winCount++);
+					alert('You are strong in the Force!' + ' Win Count: ' + winCount++);				
 				} 
 			
 		/*if guess correct, send to rightWord html display "rightGuess". The thing I can't seem to 
@@ -68,4 +69,29 @@
 				htmlRightGuess[0].innerHTML = rightWord.join(' ');
 				htmlWrongGuess[0].innerHTML = wrongWord.join(' ');
 			}
+
+		
+		
 		});
+
+/* Problems with the game I couldn't work out in the alloted time :(
+	1. Reset Button doesn't work
+
+		$('#reset-button').on("click", function(){
+			.empty();???? Lost on this part! 
+		})
+				function resetGame() {
+				usedLetters = [];
+				underScore = [];
+				makeUnderScores();
+				updateAreas();
+				}
+	
+	2. Underscores don't display before trying to key-in letters
+		
+		...not sure at all
+
+	3. CSS styling attributes
+
+	*/ 
+
